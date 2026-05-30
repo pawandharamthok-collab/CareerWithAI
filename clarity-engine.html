@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Clarity Engine — CareerWithAI</title>
+  <meta name="description" content="Take a free 3-minute career assessment and get a personalized Career Clarity Report. Honest, practical guidance for Indian students and fresh graduates — no hype, no fear.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/engine.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23F5A623'/><polygon points='16,4 18,14 28,16 18,18 16,28 14,18 4,16 14,14' fill='%230A0A0F' opacity='0.9'/></svg>">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" id="nav-logo">
+        <span class="nav__logo-icon" style="background: var(--accent-gradient); position: relative; overflow: hidden;">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <polygon points="16,2 18.5,13 29,16 18.5,19 16,30 13.5,19 3,16 13.5,13" fill="#0A0A0F" opacity="0.9"/>
+          </svg>
+        </span>
+        CareerWithAI
+      </a>
+
+      <div class="nav__links" id="nav-links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="index.html#approach" class="nav__link">Our Approach</a>
+        <a href="index.html#paths" class="nav__link">Career Paths</a>
+        <a href="index.html#newsletter" class="btn btn--primary" id="nav-cta">Join Newsletter</a>
+      </div>
+
+      <button class="nav__mobile-toggle" id="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== PROGRESS BAR ==================== -->
+  <div class="progress" id="progress-bar" style="display: none;">
+    <div class="progress__inner">
+      <div class="progress__header">
+        <span class="progress__label">Career Clarity Assessment</span>
+        <span class="progress__count" id="progress-count">1 / 10</span>
+      </div>
+      <div class="progress__bar">
+        <div class="progress__fill" id="progress-fill" style="width: 10%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ENGINE BODY ==================== -->
+  <main class="engine">
+    <div class="engine__body" id="engine-body">
+      <!-- Intro, Steps, Analyzing, and Report are rendered by JS -->
+    </div>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__bottom" style="margin-top: 0; padding-top: 0; border-top: none;">
+        <span class="footer__copy">© 2026 CareerWithAI. Built with genuine intent.</span>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a href="#" class="footer__social-link" aria-label="Twitter / X" title="Twitter / X">𝕏</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/clarity-engine.js"></script>
+</body>
+</html>

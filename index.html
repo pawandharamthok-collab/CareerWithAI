@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerWithAI — Your Career, Powered by Clarity, Not Fear</title>
+  <meta name="description" content="Cut through the AI noise. Get honest career guidance backed by 18 years of industry experience. No hype, no fear — just a clear path forward for Indian students and fresh graduates.">
+  <meta name="keywords" content="AI career, career guidance, fresh graduates, Indian students, AI jobs, career clarity, no hype">
+  <meta name="author" content="CareerWithAI">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CareerWithAI — Your Career, Powered by Clarity, Not Fear">
+  <meta property="og:description" content="Cut through the AI noise. Honest career guidance for Indian students and fresh graduates.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23F5A623'/><polygon points='16,4 18,14 28,16 18,18 16,28 14,18 4,16 14,14' fill='%230A0A0F' opacity='0.9'/></svg>">
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" id="nav-logo">
+        <span class="nav__logo-icon" style="position: relative; overflow: hidden;">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <polygon points="16,2 18.5,13 29,16 18.5,19 16,30 13.5,19 3,16 13.5,13" fill="#0A0A0F" opacity="0.9"/>
+          </svg>
+        </span>
+        CareerWithAI
+      </a>
+
+      <div class="nav__links" id="nav-links">
+        <a href="clarity-engine.html" class="nav__link" id="nav-link-engine">Career Clarity Engine</a>
+        <a href="#problem" class="nav__link" id="nav-link-problem">The Problem</a>
+        <a href="#approach" class="nav__link" id="nav-link-approach">Our Approach</a>
+        <a href="#paths" class="nav__link" id="nav-link-paths">Career Paths</a>
+        <a href="#about" class="nav__link" id="nav-link-about">About</a>
+        <a href="#newsletter" class="btn btn--primary" id="nav-cta">Join Newsletter</a>
+      </div>
+
+      <button class="nav__mobile-toggle" id="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero section" id="hero">
+    <div class="hero__bg">
+      <div class="bg-grid"></div>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+      <div class="hero__particles" id="hero-particles"></div>
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__badge">
+        <span class="badge badge--accent">
+          <span class="badge__dot"></span>
+          Built by 18 years of industry experience
+        </span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">Your career,</span>
+        <span class="hero__title-line">powered by <span class="gradient-text">clarity</span></span>
+        <span class="hero__title-line">— not fear.</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Cut through the AI noise. Get honest, practical career guidance for Indian students and fresh graduates. No hype. No fear-mongering. Just a clear path forward.
+      </p>
+
+      <div class="hero__actions">
+        <a href="clarity-engine.html" class="btn btn--primary btn--lg" id="hero-cta-primary">
+          Take the Clarity Assessment
+          <span class="btn__icon">→</span>
+        </a>
+        <a href="#paths" class="btn btn--secondary btn--lg" id="hero-cta-secondary">
+          Explore Career Paths
+        </a>
+      </div>
+
+      <div class="hero__proof">
+        <div class="hero__proof-item">
+          <span class="hero__proof-icon">✓</span>
+          <span>100% Free to Start</span>
+        </div>
+        <div class="hero__proof-item">
+          <span class="hero__proof-icon">✓</span>
+          <span>No Fear-Selling, Ever</span>
+        </div>
+        <div class="hero__proof-item">
+          <span class="hero__proof-icon">✓</span>
+          <span>Real Industry Insights</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS TICKER ==================== -->
+  <div class="ticker" id="ticker">
+    <div class="ticker__track" id="ticker-track">
+      <div class="ticker__item"><span class="ticker__item-dot"></span>AI is automating tasks, not entire jobs</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>73% of companies say they can't find AI-literate juniors</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>The skills gap is growing, not the job gap</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Most layoffs are driven by over-hiring, not AI replacement</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Every domain needs people who can work alongside AI</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Your portfolio matters more than your certificates</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>System thinking is the most valuable skill in 2026</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>The honest voice wins in a market full of noise</div>
+      <!-- Duplicated for seamless loop -->
+      <div class="ticker__item"><span class="ticker__item-dot"></span>AI is automating tasks, not entire jobs</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>73% of companies say they can't find AI-literate juniors</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>The skills gap is growing, not the job gap</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Most layoffs are driven by over-hiring, not AI replacement</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Every domain needs people who can work alongside AI</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>Your portfolio matters more than your certificates</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>System thinking is the most valuable skill in 2026</div>
+      <div class="ticker__item"><span class="ticker__item-dot"></span>The honest voice wins in a market full of noise</div>
+    </div>
+  </div>
+
+  <!-- ==================== PROBLEM SECTION ==================== -->
+  <section class="problem section" id="problem">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="problem__header reveal">
+        <span class="section__label">The Problem</span>
+        <h2 class="section__title">The AI career conversation<br>is <span class="gradient-text">broken</span>.</h2>
+        <p class="section__subtitle">
+          The market is selling two things: fear and hype. Neither helps you. Here's what we see happening — and why it needs to change.
+        </p>
+      </div>
+
+      <div class="problem__grid">
+        <!-- Fear Card -->
+        <div class="card reveal reveal-delay-1" id="problem-card-fear">
+          <div class="card__icon card__icon--danger">😰</div>
+          <span class="problem__card-label problem__card-label--fear">The Fear Sellers</span>
+          <h3 class="card__title">
+            "AI will take your job.<br>Be afraid."
+          </h3>
+          <p class="card__text">
+            Influencers and "thought leaders" profiting from your anxiety. They need you scared so you buy their course. The truth? AI changes how work is done — it doesn't eliminate the need for people.
+          </p>
+        </div>
+
+        <!-- Hype Card -->
+        <div class="card reveal reveal-delay-2" id="problem-card-hype">
+          <div class="card__icon card__icon--warning">🚀</div>
+          <span class="problem__card-label problem__card-label--hype">The Hype Sellers</span>
+          <h3 class="card__title">
+            "Learn AI in 30 days.<br>Earn ₹50 LPA."
+          </h3>
+          <p class="card__text">
+            Bootcamps and course-mills making impossible promises. They sell you a certificate, not competence. Most students feel scammed after completing these "guaranteed" programs.
+          </p>
+        </div>
+
+        <!-- Silence Card -->
+        <div class="card reveal reveal-delay-3" id="problem-card-silence">
+          <div class="card__icon card__icon--info">🤷</div>
+          <span class="problem__card-label problem__card-label--silence">The Actual Gap</span>
+          <h3 class="card__title">
+            Nobody teaches the<br>middle ground.
+          </h3>
+          <p class="card__text">
+            Nobody is teaching you how to actually work with AI in your specific career. Not "build a transformer" — but "use AI to be 10x more productive in your actual job."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== APPROACH SECTION ==================== -->
+  <section class="approach section" id="approach">
+    <div class="container">
+      <div class="approach__header reveal">
+        <span class="section__label">Our Approach</span>
+        <h2 class="section__title">We believe in clarity,<br>not <span class="gradient-text">chaos</span>.</h2>
+        <p class="section__subtitle">
+          Three principles guide everything we do. No shortcuts. No gimmicks. Just honest, experienced guidance that actually gets you to your first job.
+        </p>
+      </div>
+
+      <div class="approach__grid">
+        <!-- Pillar 1 -->
+        <div class="card approach__card reveal reveal-delay-1" id="approach-card-1">
+          <span class="approach__number">01</span>
+          <div class="card__icon card__icon--accent">🧠</div>
+          <h3 class="card__title">System Thinking</h3>
+          <p class="card__text">
+            Break down complex career decisions into clear, actionable steps. We teach you how to think about problems, not just solve them. This is the skill that separates juniors who get hired from those who don't.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="card approach__card reveal reveal-delay-2" id="approach-card-2">
+          <span class="approach__number">02</span>
+          <div class="card__icon card__icon--accent">💼</div>
+          <h3 class="card__title">Real-World Experience</h3>
+          <p class="card__text">
+            18 years of managing projects, people, and technological shifts. Not theory from a textbook — real insights from someone who's hired, managed, and mentored dozens of professionals through multiple waves of change.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="card approach__card reveal reveal-delay-3" id="approach-card-3">
+          <span class="approach__number">03</span>
+          <div class="card__icon card__icon--accent">🎯</div>
+          <h3 class="card__title">Outcomes, Not Certificates</h3>
+          <p class="card__text">
+            Your portfolio matters. Your certificates don't. Every piece of guidance we provide is designed to produce something tangible — a project, a skill demonstration, a portfolio piece that employers actually care about.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAREER PATHS PREVIEW ==================== -->
+  <section class="paths section" id="paths">
+    <div class="bg-grid"></div>
+    <div class="container">
+      <div class="paths__header reveal">
+        <span class="section__label">Career Paths</span>
+        <h2 class="section__title">Where the real<br><span class="gradient-text">opportunities</span> are.</h2>
+        <p class="section__subtitle">
+          Not every career path is "booming." Here's an honest look at what's growing, what's stable, and where Indian graduates should focus in 2026.
+        </p>
+      </div>
+
+      <div class="paths__grid">
+        <div class="path-card reveal reveal-delay-1" id="path-ai-developer">
+          <div class="path-card__emoji">💻</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">AI-Augmented Developer</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> High Demand
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-2" id="path-data-analyst">
+          <div class="path-card__emoji">📊</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">Data Analyst</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> Growing
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-3" id="path-product-manager">
+          <div class="path-card__emoji">🗺️</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">Product Manager</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> Growing
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-4" id="path-ai-ops">
+          <div class="path-card__emoji">⚙️</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">AI/ML Ops Engineer</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> High Demand
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-1" id="path-ux-designer">
+          <div class="path-card__emoji">🎨</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">UX/UI Designer</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--stable">
+                <span class="path-card__status-dot"></span> Stable
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-2" id="path-cybersecurity">
+          <div class="path-card__emoji">🛡️</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">Cybersecurity Analyst</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> Growing
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-3" id="path-digital-marketing">
+          <div class="path-card__emoji">📱</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">Digital Marketing (AI-Powered)</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--stable">
+                <span class="path-card__status-dot"></span> Stable
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-card reveal reveal-delay-4" id="path-cloud-devops">
+          <div class="path-card__emoji">☁️</div>
+          <div class="path-card__content">
+            <h4 class="path-card__title">Cloud & DevOps Engineer</h4>
+            <div class="path-card__meta">
+              <span class="path-card__status path-card__status--growing">
+                <span class="path-card__status-dot"></span> Growing
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paths__cta reveal">
+        <span class="badge badge--accent" style="font-size: var(--text-sm); padding: var(--space-2) var(--space-4);">
+          🚧 Interactive Career Map — Coming Soon
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOUNDER SECTION ==================== -->
+  <section class="founder section" id="about">
+    <div class="container">
+      <div class="founder__content reveal">
+        <div class="founder__avatar" id="founder-avatar">
+          👨‍💼
+        </div>
+
+        <div class="founder__info">
+          <div>
+            <h3 class="founder__name">Pawan Dharamthok</h3>
+            <span class="founder__role">Founder, CareerWithAI</span>
+          </div>
+
+          <blockquote class="founder__quote">
+            "I've spent 18 years managing projects, people, and technology shifts. I've seen every wave — from cloud to mobile to AI. The pattern is always the same: the noise is loud, but the opportunity is real. I built CareerWithAI because students deserve honest guidance from someone who's actually been in the industry — not fear from someone selling a course."
+          </blockquote>
+
+          <div class="founder__stats">
+            <div>
+              <div class="founder__stat-value" data-counter="18">0</div>
+              <div class="founder__stat-label">Years in Industry</div>
+            </div>
+            <div>
+              <div class="founder__stat-value" data-counter="50">0</div>
+              <div class="founder__stat-label">People Managed</div>
+            </div>
+            <div>
+              <div class="founder__stat-value" data-counter="100">0</div>
+              <div class="founder__stat-label">Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER CTA ==================== -->
+  <section class="newsletter section" id="newsletter">
+    <div class="newsletter__bg-glow"></div>
+    <div class="container newsletter__inner">
+      <div class="newsletter__icon reveal">📬</div>
+
+      <h2 class="newsletter__title reveal reveal-delay-1">
+        The No-BS AI<br><span class="gradient-text">Career Digest</span>
+      </h2>
+
+      <p class="newsletter__text reveal reveal-delay-2">
+        Weekly insights on what's real, what's hype, and what you should actually do. No spam. No fear-mongering. Just clarity — delivered every Monday.
+      </p>
+
+      <form class="newsletter__form reveal reveal-delay-3" id="newsletter-form">
+        <div class="input-group">
+          <input
+            type="email"
+            class="input-group__input"
+            id="newsletter-email"
+            placeholder="your@email.com"
+            required
+            aria-label="Email address"
+          >
+          <button type="submit" class="input-group__btn" id="newsletter-submit">
+            Subscribe →
+          </button>
+        </div>
+      </form>
+
+      <p class="newsletter__privacy reveal reveal-delay-4">
+        🔒 No spam. Unsubscribe anytime. Your data stays with us.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">CareerWithAI</span>
+          <span class="footer__tagline">Your career, powered by clarity — not fear.</span>
+        </div>
+
+        <div class="footer__links">
+          <a href="#problem" class="footer__link">The Problem</a>
+          <a href="#approach" class="footer__link">Our Approach</a>
+          <a href="#paths" class="footer__link">Career Paths</a>
+          <a href="#about" class="footer__link">About</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 CareerWithAI. Built with genuine intent.</span>
+
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" id="social-linkedin" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a href="#" class="footer__social-link" id="social-twitter" aria-label="Twitter / X" title="Twitter / X">𝕏</a>
+          <a href="#" class="footer__social-link" id="social-youtube" aria-label="YouTube" title="YouTube">▶</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== TOAST ==================== -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    <span class="toast__icon">✅</span>
+    <span class="toast__message" id="toast-message">Welcome aboard! Check your inbox.</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
