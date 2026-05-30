@@ -1014,8 +1014,12 @@ function generateReport() {
           Join the Newsletter
           <span class="btn__icon">→</span>
         </a>
-        <button class="btn btn--secondary btn--lg" onclick="retakeAssessment()">
-          Retake Assessment
+        <button class="btn btn--secondary btn--lg" onclick="generateShareCard('${top3[0].title}', '${top3[0].emoji}', ${top3[0].percentage})">
+          <span class="btn__icon">📸</span>
+          Share My Result
+        </button>
+        <button class="btn btn--secondary btn--lg" onclick="retakeAssessment()" style="border: none; background: transparent; padding-left: 0;">
+          Retake
         </button>
       </div>
     </div>
@@ -1036,6 +1040,103 @@ function generateReport() {
 
   // Scroll to top of report
   window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ============ SHAREABLE CARD GENERATOR ============ */
+function generateShareCard(title, emoji, percentage) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 1080;
+  canvas.height = 1080; // Square format for Instagram/LinkedIn
+  const ctx = canvas.getContext('2d');
+
+  // Background (Dark gradient)
+  const grad = ctx.createLinearGradient(0, 0, 1080, 1080);
+  grad.addColorStop(0, '#0A0A0F');
+  grad.addColorStop(1, '#1A1A24');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 1080, 1080);
+
+  // Decorative Orb
+  const orbGrad = ctx.createRadialGradient(540, 540, 0, 540, 540, 800);
+  orbGrad.addColorStop(0, 'rgba(245, 166, 35, 0.15)');
+  orbGrad.addColorStop(1, 'rgba(10, 10, 15, 0)');
+  ctx.fillStyle = orbGrad;
+  ctx.fillRect(0, 0, 1080, 1080);
+
+  // Top Branding
+  ctx.fillStyle = '#F5A623';
+  ctx.font = 'bold 40px "Outfit", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('CareerWithAI 🧭', 540, 150);
+
+  // Main Heading
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = 'bold 70px "Outfit", sans-serif';
+  ctx.fillText('My AI Era Career Path is:', 540, 350);
+
+  // The Result Card Box
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.03)';
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.roundRect(140, 420, 800, 350, 24);
+  ctx.fill();
+  ctx.stroke();
+
+  // Result Emoji
+  ctx.font = '120px Arial';
+  ctx.fillText(emoji, 540, 550);
+
+  // Result Title
+  ctx.fillStyle = '#F5A623';
+  ctx.font = 'bold 80px "Outfit", sans-serif';
+  ctx.fillText(title, 540, 680);
+
+  // Match Percentage
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+  ctx.font = '50px "Inter", sans-serif';
+  ctx.fillText(`${percentage}% Match based on my profile`, 540, 750);
+
+  // Footer CTA
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.font = '40px "Inter", sans-serif';
+  ctx.fillText('Find your path at pawandharamthok-collab.github.io/CareerWithAI', 540, 950);
+
+  // Trigger Download
+  try {
+    const dataUrl = canvas.toDataURL('image/png');
+    
+    // Try Web Share API for mobile devices
+    if (navigator.share) {
+      canvas.toBlob(async (blob) => {
+        const file = new File([blob], 'my-career-path.png', { type: 'image/png' });
+        try {
+          await navigator.share({
+            title: 'My AI Career Path',
+            text: 'I just found my path in the AI era using CareerWithAI!',
+            files: [file]
+          });
+        } catch (err) {
+          downloadCanvas(dataUrl);
+        }
+      });
+    } else {
+      // Fallback to direct download
+      downloadCanvas(dataUrl);
+    }
+  } catch (e) {
+    console.error("Could not generate image: ", e);
+    alert('Sorry, there was an error generating your image.');
+  }
+}
+
+function downloadCanvas(dataUrl) {
+  const link = document.createElement('a');
+  link.download = 'my-career-path.png';
+  link.href = dataUrl;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 function retakeAssessment() {
