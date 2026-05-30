@@ -173,23 +173,50 @@ function initNewsletterForm() {
       return;
     }
 
-    // Simulate submission (replace with real endpoint later)
+    // Submit to Web3Forms API
     submitBtn.textContent = 'Subscribing...';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      submitBtn.textContent = 'Subscribed ✓';
+    // REPLACE THIS WITH YOUR WEB3FORMS ACCESS KEY
+    const accessKey = 'YOUR_WEB3FORMS_ACCESS_KEY_HERE';
 
-      // Show toast
-      showToast('Welcome aboard! You\'ll receive your first digest next Monday. 🎉');
-
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        access_key: accessKey,
+        email: email,
+        subject: 'New Newsletter Subscriber for CareerWithAI',
+        from_name: 'CareerWithAI Website',
+      })
+    })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        submitBtn.textContent = 'Subscribed ✓';
+        showToast('Welcome aboard! You\'ll receive your first digest next Monday. 🎉');
+      } else {
+        console.log(response);
+        submitBtn.textContent = 'Error!';
+        showToast(json.message || 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      submitBtn.textContent = 'Error!';
+      showToast('Something went wrong. Please try again.');
+    })
+    .finally(() => {
       // Reset after delay
       setTimeout(() => {
         emailInput.value = '';
         submitBtn.textContent = 'Subscribe →';
         submitBtn.disabled = false;
       }, 3000);
-    }, 1200);
+    });
   });
 }
 
