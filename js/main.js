@@ -178,7 +178,7 @@ function initNewsletterForm() {
     submitBtn.disabled = true;
 
     // REPLACE THIS WITH YOUR WEB3FORMS ACCESS KEY
-    const accessKey = 'YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+    const accessKey = '499b8ddf-a872-4544-8601-09efc4fd51ad';
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
